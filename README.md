@@ -46,4 +46,6 @@ Designed as part of a hands-on **SOC Analyst Assignment**, it focuses on setting
 disabled = 0
 index = wineventlog
 
+```
+
 
