@@ -48,4 +48,58 @@ index = wineventlog
 
 ```
 
+### 3. Configure outputs.conf
+```ini
+[tcpout]
+defaultGroup = default-autolb-group
+
+[tcpout:default-autolb-group]
+server = <Your_Indexer_IP>:9997
+
+```
+### 4. Enable Receiving on Splunk Enterprise
+```ini
+Port: 9997
+
+```
+
+### 5. Restart Splunk UF
+```ini
+splunk restart
+
+```
+✅ Validation Example
+Search Query in Splunk:
+```ini
+host="DESKTOP-IRBHD8G" sourcetype="WinEventLog:Security"
+
+```
+
+### Result:
+Successfully indexed over 20,000+ Windows Security events, including:
+
+EventCode 4624 – Logon Success
+
+EventCode 4625 – Logon Failure
+
+EventCode 4672 – Admin Privilege Use
+
+
+---
+
+✍️ Author
+
+Faizanullah Syed
+
+Cybersecurity & SOC Analyst Trainee
+
+🌐 Connect with Me
+
+📝 Blog: unmaskcyber.com 
+
+## 🧠 #Tags
+
+splunk universal forwarder, windows event logs, eventcode 4624, soc analyst project, log forwarding, inputs.conf, outputs.conf, tcp port 9997, splunk enterprise, siem project, real-time log collection, log monitoring, security log forwarder, windows splunk configuration, cybersecurity internship project, splunk data ingestion
+
+
 
